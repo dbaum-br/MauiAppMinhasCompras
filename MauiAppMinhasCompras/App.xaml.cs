@@ -1,4 +1,5 @@
 ﻿using MauiAppMinhasCompras.Helpers;
+using System.Globalization;
 
 namespace MauiAppMinhasCompras
 {
@@ -23,6 +24,8 @@ namespace MauiAppMinhasCompras
         public App()
         {
             InitializeComponent();
+            // Altera o padrão da moeda
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pr-BR");
 
             //MainPage = new AppShell();
             MainPage = new NavigationPage(new Views.ListaProduto());
